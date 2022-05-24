@@ -28,5 +28,9 @@ public interface LocalitaRepository extends JpaRepository<Localita,Integer>{
 	@Modifying
 	@Query("delete from Localita loc where loc.temperatura >= :par")
 	public void cancellaByTemperaturaSuperiore(@Param("par") Float temperatura);
+	
+	@Modifying
+	@Query("delete from Localita loc where loc.temperatura >= :par")
+	public void cancellaByTemperaturaSuperiorea(@Param("par") Float temperatura);
 		
 }
